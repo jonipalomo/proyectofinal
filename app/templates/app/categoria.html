@@ -1,0 +1,12 @@
+{% extends 'app/base.html' %}
+{% block contenido %} 
+<ul class="dropdown-menu alert-dark" aria-labelledby="navbarDropdown"> 
+                {% for resultado in categoria %}
+                <li> <a class="dropdown-item alert-link"> {{resultado.descripcion}}</a></li>
+                   
+                {% endfor %}
+        
+    </div>
+</div>
+
+{% endblock %} 

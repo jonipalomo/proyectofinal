@@ -1,0 +1,31 @@
+{% extends 'app/base.html' %}
+{% block contenido %} 
+<div class="card">
+    <div class="card body">
+        <table>
+            <table class="table table-striped table-hover table-responsive-sm">
+                <tr>
+                    <th> Titulo </th>
+                    <th> Descripcion </th>
+                    <th> Precio </th>
+                    <th> Categoria </th> 
+                    <th> Opciones</th>       
+                </tr>
+                {% for un_producto in productos %}
+                <tr>
+                    <td> {{ un_producto.titulo }} </td>
+                    <td> {{ un_producto.descripcion }}</td>
+                    <td> $ {{ un_producto.precio }} </td>
+                    <td> {{ un_producto.categoria }} </td>
+                    <td> <a href="{% url 'modificar_producto' un_producto.id %}" class="btn btn-info btn-sm"> Modificar</a></td>
+                    <td> <a href="{% url 'eliminar_producto' un_producto.id %}" class="btn btn-danger btn-sm"> Eliminar</a></td>
+
+                </tr>
+                {% endfor %}
+            </table>
+    </div>
+</div>
+
+{% endblock %} 
+
+    

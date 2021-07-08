@@ -1,0 +1,45 @@
+<h2>Productos</h2>
+        <div class="productos">
+            {% for un_producto in productos_listados %}
+            <li>  {{un_producto.titulo}} <br> {{un_producto.imagen}} {{un_producto.categoria}} <br>  $ {{un_producto.precio}}" </li>
+            <div class="producto">
+
+                <div class="contenedor_producto">
+                    {% if p.imagen %}
+                    <img src="{{ p.imagnen.urls }}" alt="imagen producto">
+                    {% endif %}
+                    <div class="detalle">
+                    
+                    </div>
+                    
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+{% endblock %}
+
+{% if p.imagen %}
+<img src="{{ p.imagen.url }}" alt="imagen producto">
+{% endif %}
+
+<h2>Productos</h2>
+        <div class="productos">
+            {% for un_producto in productos %}
+            <li>  {{un_producto.titulo}} <br> {{un_producto.categoria}} <br>  $ {{un_producto.precio}}" </li>
+            <div class="producto">
+
+                <div class="contenedor_producto">
+                    
+                    <img src="{{ un_ori.imagen.url }}" alt="imagen producto">
+                    
+                   
+                <div class="detalle">
+             
+
+                </div>
+                    
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+{% endblock %}
